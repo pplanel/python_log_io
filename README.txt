@@ -5,13 +5,19 @@ Handler for the python logging framework for log.io stateless TCP API
 
 http://logio.org/
 
-Usage:
-::
+*Example usage:*
 
+1. The defaults
+```python
+import logging
 from log_io_handler import LogIOHandler
 
+Logger = logging.getLogger("my_logio_logger")
+logging.basicConfig(level=logging.DEBUG)
 Logger.addHandler(LogIOHandler)
+```
 
+2. Using dict_config
 #or dict_config
 'handlers'
         'log_io': {
